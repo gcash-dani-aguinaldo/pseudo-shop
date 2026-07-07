@@ -12,5 +12,65 @@
 # }
 
 # Placeholder product list
-product_list = []
+product_list = [
+    {
+        name: "Compact Shelf",
+        price: 1200,
+        width: 30,
+        height: 80,
+        length: 25,
+        weight: 10,
+        color: "white",
+        brand: "HomeBasic"
+    },
+    {
+        name: "Office Desk",
+        price: 4500,
+        width: 120,
+        height: 75,
+        length: 60,
+        weight: 25,
+        color: "black",
+        brand: "WorkPro"
+    },
+    {
+        name: "Dining Chair",
+        price: 1800,
+        width: 45,
+        height: 95,
+        length: 45,
+        weight: 7,
+        color: "white",
+        brand: "HomeBasic"
+    }
+]
+
+function filter_products(filters):
+    filtered_products = []
+
+    for each product in product_list:
+        matches = true
+
+        if filters.width exists and product.width != filters.width:
+            matches = false
+
+        if filters.height exists and product.height != filters.height:
+            matches = false
+
+        if filters.length exists and product.length != filters.length:
+            matches = false
+
+        if filters.weight exists and product.weight != filters.weight:
+            matches = false
+
+        if filters.color exists and product.color != filters.color:
+            matches = false
+
+        if filters.brand exists and product.brand != filters.brand:
+            matches = false
+
+        if matches:
+            add product to filtered_products
+
+    return filtered_products
 
