@@ -1,8 +1,10 @@
 # Handles product data
 
-# Sample structure:
+# Product structure (in-memory):
 # product = {
+#     id: 1,
 #     name: "Sample Product",
+#     price: 0.0,
 #     width: 10,
 #     height: 5,
 #     length: 20,
@@ -11,6 +13,6 @@
 #     brand: "Generic"
 # }
 
-# Placeholder product list
+# In-memory data store
 product_list = []
-
+next_product_id = 1
