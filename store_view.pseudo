@@ -5,4 +5,8 @@ function display_products():
     print "===== Storefront ====="
     for each product in product_list:
         print "Name: " + product.name
-
+        print "Price: $" + product.price
+        print "Width: " + product.width
+        print "Height: " + product.height
+        print "Length: " + product.length
+        print "Weight: " + product.weight
