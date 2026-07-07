@@ -15,6 +15,7 @@ print "Loading products..."
 products = [
     { name: "Laptop", price: 999.99, color: "silver", brand: "TechCo" },
     { name: "Desk Lamp", price: 39.99, color: "black", brand: "BrightHome" },
+    { name: "Wireless Mouse", price: 29.99, color: "black", brand: "ClickPro" },
     { name: "Water Bottle", price: 19.99, color: "blue", brand: "Hydra" }
 ]
 
