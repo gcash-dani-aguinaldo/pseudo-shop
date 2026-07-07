@@ -1,5 +1,14 @@
 # Displays product listings
 
+
+# Displays either the full product list or filtered subject
+# Uses filters from feature 1 when filters are given
+function display_products(filters = none): 
+    if filters is not none:
+        products_to_display = filter_products(filters)
+    else:
+        products_to_display = product_list
+        
 # Basic display function - shows product names 
 function display_products():
     print "===== Storefront ====="
