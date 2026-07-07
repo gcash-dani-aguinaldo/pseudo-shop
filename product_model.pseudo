@@ -16,3 +16,24 @@
 # In-memory data store
 product_list = []
 next_product_id = 1
+
+# Create a product and add it to the product list
+function add_product(name, price, width, height, length, weight, color, brand):
+    product = {
+        id: next_product_id,
+        name: name,
+        price: price,
+        width: width,
+        height: height,
+        length: length,
+        weight: weight,
+        color: color,
+        brand: brand
+    }
+    add product to product_list
+    next_product_id = next_product_id + 1
+    return product
+
+# Return the full in-memory product list
+function get_all_products():
+    return product_list
