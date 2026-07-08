@@ -1,38 +1,29 @@
 # Main entry point
 
 # This file ties together all components of the pseudo-shop
-# Feel free to modify this to simulate application flow
 
 print "Welcome to the Pseudo Shop!"
 
-# Simulate starting the user flow
-print "Starting user flow..."
-print "Creating account for Ada"
-print "Logging in as Ada"
+print "Creating a new user account..."
+create_user("Ada Lovelace", "ada@example.com", "secure123")
 
-# Simulate loading the product catalog
-print "Loading products..."
-products = [
-    { name: "Laptop", price: 999.99, color: "silver", brand: "TechCo" },
-    { name: "Desk Lamp", price: 39.99, color: "black", brand: "BrightHome" },
-    { name: "Wireless Mouse", price: 29.99, color: "black", brand: "ClickPro" },
-    { name: "Water Bottle", price: 19.99, color: "blue", brand: "Hydra" }
-]
+print "Logging in with the new credentials..."
+login_result = login_user("ada@example.com", "secure123")
+print "Login result: " + login_result
 
-# Simulate displaying products
-print "Showing products in the store:"
-for each product in products:
-    print "- " + product.name + " | $" + product.price + " | " + product.color + " | " + product.brand
+print "Adding a new product to the catalog..."
+new_product = add_product("Gaming Chair", 4999, 60, 110, 60, 12, "black", "ErgoMax")
+print "Added product: " + new_product.name
 
-# Simulate filtering by attribute
-print "Filtering products by color: black"
-filtered_products = []
-for each product in products:
-    if product.color == "black":
-        append product to filtered_products
+print "Showing the full product catalog..."
+display_products()
 
-for each product in filtered_products:
-    print "- " + product.name + " | $" + product.price + " | " + product.color + " | " + product.brand
+print "Filtering products by color and brand..."
+filters = {
+    color: "black",
+    brand: "ErgoMax"
+}
+display_products(filters)
 
 print "Application flow complete."
 
