@@ -1,3 +1,22 @@
-# notes:
-# passwords are stores as pseudo-values
-# user data structure is in-memory list, not database
+# Handles user registration and login
+
+# passwords are stored as pseudo-values
+# user data structure is an in-memory list, not a database
+
+user_list = []
+
+function create_user(name, email, password):
+    user = {
+        name: name,
+        email: email,
+        password: password
+    }
+    add user to user_list
+    return user
+
+function login_user(email, password):
+    for each user in user_list:
+        if user.email == email and user.password == password:
+            return true
+
+    return false

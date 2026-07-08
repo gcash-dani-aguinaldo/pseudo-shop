@@ -13,9 +13,9 @@
 #     brand: "Generic"
 # }
 
-# Placeholder product list
 product_list = [
     {
+        id: 1,
         name: "Compact Shelf",
         price: 1200,
         width: 30,
@@ -26,6 +26,7 @@ product_list = [
         brand: "HomeBasic"
     },
     {
+        id: 2,
         name: "Office Desk",
         price: 4500,
         width: 120,
@@ -36,6 +37,7 @@ product_list = [
         brand: "WorkPro"
     },
     {
+        id: 3,
         name: "Dining Chair",
         price: 1800,
         width: 45,
@@ -46,6 +48,8 @@ product_list = [
         brand: "HomeBasic"
     }
 ]
+
+next_product_id = 4
 
 function filter_products(filters):
     filtered_products = []
