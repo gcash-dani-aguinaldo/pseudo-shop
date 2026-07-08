@@ -1,5 +1,16 @@
-# Displays product listings
+function display_products(products):
+    for each product in products:
+        print "Name: " + product.name
+        print "Price: " + product.price
+        print "Width: " + product.width
+        print "Height: " + product.height
+        print "Length: " + product.length
+        print "Weight: " + product.weight
+        print "Color: " + product.color
+        print "Brand: " + product.brand
+        print "--------------------"
 
+<<<<<<< HEAD
 # Render the full or filtered list of products
 function display_products(filters = none): 
     if filters is not none:
@@ -20,4 +31,15 @@ function display_products(filters = none):
             print "Color: " + product.color
             print "Brand: " + product.brand
             print "----------------------"
+=======
+function demo_filter_products():
+    filters = {
+        color: "white",
+        brand: "HomeBasic"
+    }
+
+    filtered_products = filter_products(filters)
+
+    print "Filtered products:"
+>>>>>>> feat/filter
 
