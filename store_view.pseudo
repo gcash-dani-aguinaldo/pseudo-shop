@@ -1,5 +1,9 @@
 # Displays product listings
 
-# Placeholder function:
-# function display_products()
-
+# Render the full list of products
+function display_products():
+    if product_list is empty:
+        print "No products available."
+    else:
+        for each product in product_list:
+            print product.id + ": " + product.name + " - $" + product.price

@@ -6,3 +6,8 @@
 # Run the app
 print "Welcome to the Pseudo Shop!"
 
+# Seed and list products (Feature 3 demo)
+add_product("Widget", 9.99, 10, 5, 20, 1.5, "red", "Generic")
+add_product("Gadget", 19.99, 8, 3, 15, 0.8, "blue", "Acme")
+display_products()
+
