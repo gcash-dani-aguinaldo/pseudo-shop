@@ -1,24 +1,23 @@
 # Displays product listings
 
-
-# Displays either the full product list or filtered subject
-# Uses filters from feature 1 when filters are given
+# Render the full or filtered list of products
 function display_products(filters = none): 
     if filters is not none:
         products_to_display = filter_products(filters)
     else:
         products_to_display = product_list
-        
-# Basic display function - shows product names 
-function display_products():
-    print "===== Storefront ====="
-    for each product in product_list:
-        print "Name: " + product.name
-        print "Price: $" + product.price
-        print "Width: " + product.width
-        print "Height: " + product.height
-        print "Length: " + product.length
-        print "Weight: " + product.weight
-        print "Color: " + product.color
-        print "Brand: " + product.brand
-        print "----------------------"
+
+    if products_to_display is empty:
+        print "No products available."
+    else:
+        for each product in products_to_display:
+            print product.id + ": " + product.name
+            print "Price: $" + product.price
+            print "Width: " + product.width
+            print "Height: " + product.height
+            print "Length: " + product.length
+            print "Weight: " + product.weight
+            print "Color: " + product.color
+            print "Brand: " + product.brand
+            print "----------------------"
+
