@@ -1,11 +1,4 @@
-# User signup and login
-
-# In-memory storage for users
-# users = empty list
-
-# Placeholder function signatures:
-# function create_user(name, email, password)
+# function login_user(email, password)
 # 1. loop through existing users
-# 2. add the new user  to the users list
-# 3. return success with new user data
-
+# 2. if user's email and password match, return success
+# 3. if no match is found, return failure
